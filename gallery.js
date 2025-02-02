@@ -12,7 +12,7 @@ fetch('../gallery.json')
       if (/\.(jpg|jpeg|png)$/.test(item.filename.toLowerCase())) {
         // Create img element for images
         mediaElement = document.createElement('img');
-        mediaElement.src = `https://aksarangi.netlify.app/.netlify/images?url=/gallery-images/${item.filename}&fm=webp&q=50`;
+        mediaElement.src = `/gallery-images/${item.filename}`;
         mediaElement.alt = item.altText || 'Image';
         
         // Add relevant classes based on filename patterns
