@@ -14,6 +14,7 @@ fetch('../gallery.json')
         mediaElement = document.createElement('img');
         mediaElement.src = `/gallery-images/${item.filename}`;
         mediaElement.alt = item.altText || 'Image';
+        mediaElement.loading = 'lazy';
         
         // Add relevant classes based on filename patterns
         if (item.filename.toLowerCase().endsWith('-w.jpg') || item.filename.toLowerCase().endsWith('-w.jpeg') || item.filename.toLowerCase().endsWith('-w.png')) {
